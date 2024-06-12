@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux/es/exports';
 import Loader from '../Loaders/GifLoader';
 import { setLoader, UnsetLoader } from '../../../redux/actions/LoaderActions';
 import { useNavigate } from 'react-router-dom';
+import Header from '../Header/Header';
 
 const HomePage = () => {
   const [loc, setLoc] = useState({
@@ -17,14 +18,13 @@ const HomePage = () => {
     long: 0
   });
 
-  const navigate = useNavigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     let user = localStorage.getItem("userid")
     console.log(user);
     if (user === null) {
-      console.log("here");
-      // navigate("/login")
+      navigate("/login")
     }
   }, [])
 
@@ -81,20 +81,26 @@ const HomePage = () => {
   return (
     <>
       <Navbar />
-      <SearchBar />
-      <h1 className={styles.mainHead}>Nearby Stores</h1>
-      <div className={styles.cards}>
+      <Header
+        name={"Nearby Stores"}
+      />
+      <div className=" max-w-7xl px-2 sm:px-6 lg:px-8 justify-center mx-auto grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8">
         {nearby.length === 0 ? <button onClick={getLocation}>Show Nearby</button> : ""}
         {nearby.length !== 0 ? nearby.map(n => {
           return <Card n={n.shop} />
         }) : <></>}
       </div>
-      <br />
-      <br />
-      <h1 className={styles.mainHead}>Queues Joined</h1>
-      <br />
+      <Header
+        name={"Queues Joined"}
+      />
       <div>
-        {queues.length === 0 ? <div className={styles.listElement}>Join some queues!!!</div> : <></>}
+        {queues.length === 0 ?
+          <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mb-4'>
+            <div className="px-2 py-2 border border-zinc-100 shadow-lg rounded-lg flex justify-between font-bold">Join some queues!!!</div>
+          </div>
+          :
+          <></>
+        }
         {state.map(x => {
           return <ListElement x={x} state={state} setState={setState} />
         })}
