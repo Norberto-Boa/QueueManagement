@@ -1,83 +1,94 @@
-.login-heading {
-    height: 47vh;
-    width: 34vw;
-    position: relative;
+/* Login.css */
+
+.Signup-Page {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    left: -3%;
+    justify-content: center;
+    height: 100vh;
 }
 
-.login-heading>p {
-    font-family: 'Source Sans Pro';
-    color: #192839;
-    font-size: 5em;
-    font-weight: 900;
-}
-
-.login-heading>p>span {
-    color: #41D3BD;
-}
-
-.signup-head {
+.Navbar-Signup {
+    width: 100%;
     position: absolute;
-    top: 108%;
-    left: 31.5%;
-    font-family: 'Source Sans Pro';
-    font-size: 1.3em;
+    top: 0;
 }
 
-.signup-head>span {
-    cursor: pointer;
-    color: #41D3BD;
-    text-decoration: underline;
-}
-
-.radio-button {
+.middle-portion {
     display: flex;
-    justify-content: space-between;
-    width: 20vw;
-    position: absolute;
-    top: 18%;
-    left: 29%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-#field-store,
-#field-customer {
-    position: relative;
-    left: -5%;
+.login-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-heading p {
+    font-size: 2rem;
+    color: red; /* Change to red */
+}
+
+.login-heading .ques {
+    color: red; /* Change to red */
+}
+
+form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a4a4a;
+}
+
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    border-color: red; /* Change to red */
+    outline: none;
+    box-shadow: 0 0 5px red; /* Change to red */
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: red; /* Change to red */
+    color: white;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-.label-data {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 400;
-    color: #2b4057f3;
-    font-size: 1.4em;
+button:hover {
+    background-color: darkred; /* Change to dark red */
 }
 
-.emails,
-.passwords {
-    position: absolute;
-    top: 30%;
-    left: 28%;
+.text-blue-600 {
+    color: red; /* Change to red */
 }
 
-.passwords {
-    top: 54%;
+.text-blue-600:hover {
+    color: darkred; /* Change to dark red */
 }
 
-.forgot {
-    position: absolute;
-    top: 78%;
-    left: 29%;
-}
-
-.forgot>u {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 400;
-    cursor: pointer;
-    color: #41D3BD;
-    font-size: 1.3em;
+.pic {
+    max-width: 100%;
+    height: auto;
 }
