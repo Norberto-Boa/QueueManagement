@@ -1,19 +1,41 @@
+.lg_form{
+    width: 100vw;
+    height: 200px;
+    display: flex;
+   /* justify-content: center; 
+   align-items: center; */
+    /* position: relative;
+    top: 3%; */
+}
+.sideright{
+    left: 3%;
+    justify-content: right; 
+   align-items: right;
+
+}
+.sideleft{
+
+}
+
+
 .login-heading {
-    height: 47vh;
-    width: 34vw;
+   /* height: 47vh;
+    width: 34vw; */
+   /* height: 10vh;
+    width: 60vw; */
     position: relative;
     display: flex;
-    align-items: center;
-    left: -3%;
+   /* align-items: center; */
+    left: 3%;
 }
 .login-heading > p{
     font-family: 'Source Sans Pro';
-    color: #192839;
-    font-size: 5em;
+    color: #211ee8;
+    font-size: 7em;
     font-weight: 900; 
 }
 .login-heading > p > span{
-    color: #41D3BD;
+    color: #0303fa;
 }
 .signup-head{
     position: absolute;
@@ -24,7 +46,9 @@
 }
 .signup-head > span{
     cursor: pointer;
-    color: #41D3BD;
+    color: #3d2cef;
+
+   
     text-decoration: underline;
 }
 .radio-button{
@@ -65,6 +89,6 @@
     font-style: normal;
     font-weight: 400;
     cursor: pointer;
-    color: #41D3BD;
+    color: #da1717;
     font-size: 1.3em;
 }

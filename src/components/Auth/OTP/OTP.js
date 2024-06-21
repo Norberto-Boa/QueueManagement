@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../../Layout/Navbar/Navbar'
-import image from '../../Assets/pic.svg'
+import image from '../../Assets/queuimage.jpeg'
 import './OTP.css'
 import OtpInput from 'react-otp-input';
 import AuthService from '../../../services/API'
@@ -94,12 +94,12 @@ const Otp = () => {
                         x==='1' ? <div className='login-heading'>
                         <p>Check your email <span className='ques'>.</span></p>
                     </div> :<div className='otp-heading'>
-                    <p>Let us verify your email <span className='ques'>.</span></p>
+                    <p>Email verification in progress, please wait .... <span className='ques'></span></p>
                         </div> 
                     }
                 
                 <form className='input-login' onSubmit={(e) => handleSubmit(e)}>
-                    <p className='Enter-otp'>Enter OTP</p>
+                    <p className='Enter-otp'>  EnterOTP</p>
                     <div className='otp-input'>
                         <OtpInput
                             value={state}
@@ -112,7 +112,7 @@ const Otp = () => {
                         />
                     </div>
                     <button className='otp-verify' type='submit'>Verify</button>
-                    <p className='otp-head'>Didn't receive   
+                    <p className='otp-head'>Didn't receive ?   
                         {
                          minutes === 0 && seconds === 0
                         ? <u onClick={handleClick}>Resend OTP</u>

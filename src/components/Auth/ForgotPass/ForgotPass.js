@@ -1,7 +1,7 @@
 import React,{ useState,useEffect } from 'react'
 import Navbar from '../../Layout/Navbar/Navbar'
 import { useForm } from 'react-hook-form'
-import image from '../../Assets/pic.svg'
+import image from '../../Assets/queuimage.jpeg'
 import './ForgotPass.css'
 import {useNavigate} from 'react-router-dom'
 import AuthService from '../../../services/API'
@@ -39,7 +39,7 @@ const Forgot = () => {
             </div>
             <div className='middle-portion'>
                 <div className='login-heading'>
-                    <p>Enter your email <span className='ques'>.</span></p>
+                    <p>Email please. <span className='ques'></span></p>
                 </div>
                 <form className='input-login' onSubmit={handleSubmit(onSubmit)}>
                 <div className='emailf'>

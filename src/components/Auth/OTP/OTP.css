@@ -1,7 +1,7 @@
 .otp-heading > p{
     font-family: 'Source Sans Pro';
     color: #192839;
-    font-size: 5em;
+    font-size: 2em;
     font-weight: 900;
     position: relative;
     left: -12%;
@@ -11,7 +11,7 @@
     width: 32vw;
 }
 .otp-heading > p > span{
-    color: #41D3BD;
+    color: #dc1634;
 }
 .otp-input{
     position: absolute;
@@ -27,7 +27,7 @@
     top: 78%;
     border-radius: 100px;
     border: 1px solid transparent;
-    background-color: #41D3BD;
+    background-color: #cf1417;
     font-family: 'Source Sans Pro';
     font-weight: 900;
     font-size: 1.6em;

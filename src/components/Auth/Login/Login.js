@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../../Layout/Navbar/Navbar'
 import { useForm } from 'react-hook-form'
-import image from '../../Assets/pic.svg'
+import image from '../../Assets/queuimage.jpeg'
 import {useNavigate} from 'react-router-dom'
 import './Login.css'
 import AuthService from '../../../services/API'
@@ -53,10 +53,13 @@ const Login = () => {
             <div className='Navbar-Signup'>
                 <Navbar />
             </div>
-            <div className='middle-portion'>
+           
                 <div className='login-heading'>
-                    <p>Welcome Back <span className='ques'>!</span></p>
+                    <p>TRINITY BANK <span className='ques'></span></p>
                 </div>
+
+                <div className='lg_form'>
+              
                 <form className='input-login' onSubmit={handleSubmit(onSubmit)}>
                     <div className='radio-button'>
                         <div className='customer-radio'>
@@ -102,11 +105,16 @@ const Login = () => {
                             <p className='alerts'>{errors.password?.message}</p>
                         </div>
                     </div>
-                    <p className='forgot' onClick={handleClick}><u>Forgot password ?</u></p>
+                    
                     <button className='signup-btn' type='submit'>Login</button>
-                    <p className='signup-head'>Create New Account <span onClick={handleClicked}>Signup</span></p>
+                    
+                   
                 </form>
-            </div>
+                <div classname= 'sideright'>
+                    <p className='forgot' onClick={handleClick}><u>Forgot password ?</u></p>
+                    <p className='signup-head'>Create New Account <span onClick={handleClicked}>Signup</span></p>
+                    </div>
+                </div>
             <div className='queue-img'>
                 <img className="pic" src={image} alt="logo" />
             </div>

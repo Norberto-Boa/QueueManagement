@@ -106,12 +106,12 @@ const CreateStore = () => {
         <Navbar/>
         <div style={{display:"flex",alignItems:"center", justifyContent:"space-evenly"}}>
             <div className={styles.box}>
-                <h1>Edit Store Details</h1>
+                <h1>TRINITY BANK</h1>
                 <br/>
                 <StoreMallDirectoryIcon style={{position:"relative", top:"10px"}} fontSize="large"/><input placeholder="Store Name" value={strName} onChange={(e)=>{setStrName(e.target.value)}}></input>
                 <br/>
                 <select class="form-select" aria-label="Default select example" style={{width:"80%",marginLeft:"8%",borderColor:"#192839",borderWidth:"2px",padding:"6px 10px",borderRadius:"10px",fontSize:"16px"}}>
-                    <option selected>Store type</option>
+                    <option selected>Bank</option>
                     <option value="1">General store</option>
                 </select>
                 <br/>
@@ -184,7 +184,7 @@ const CreateStore = () => {
 
                     <div>
                     <h1>Address</h1>
-                    <p style={{width:"90%"}}>{about?about:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum efficitur feugiat ex sed gravida. Proin eu orci varius, dictum erat ac, ullamcorper arcu. Aliquam erat volutpat.Nam sagittis leo ut nibh vehicula, in venenatis velit laoreet. "} </p>
+                    <p style={{width:"90%"}}>{about?about:"Trinity Bank 3000 Times Square New York, NY 10036 United States"} </p>
                     </div>
                 </td>
                 

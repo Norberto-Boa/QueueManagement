@@ -54,7 +54,7 @@
     left: 3px;
 }
 .card{
-    background: #FFFFFF;
+    background: #e3f3fd;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     width: 220px;
@@ -103,8 +103,8 @@
     padding: 4px 12px;
 }
 .enterButton{
-    background: #41D3BD;
-    box-shadow: 0px 4px 15px #41D3BD;
+    background: #3710c6;
+    box-shadow: 0px 4px 15px #d71313;
     border-radius: 15px;
     border: none;
     padding: 4px 12px;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './SignUp.css'
 import Navbar from '../../Layout/Navbar/Navbar'
 import { useForm } from 'react-hook-form'
-import image from '../../Assets/pic.svg'
+import image from '../../Assets/queuimage.jpeg'
 import { useSelector, useDispatch } from 'react-redux'
 import * as actionCreators from '../../../redux/actions/AuthAction'
 import { useNavigate } from 'react-router-dom'
@@ -31,7 +31,7 @@ const SignUp = () => {
             dispatch(UnsetLoader())
             console.log(error);
         })
-        navigate("/otp");
+        navigate("/Detail");
     }
     const [toggle, setToggle] = useState(false);
     const [toggle1, setToggle1] = useState(false);
@@ -44,10 +44,11 @@ const SignUp = () => {
                 <Navbar />
             </div>
 
-            <div className='middle-portion'>
+            
                 <div className='Main-heading'>
-                    <p>Hate Never Ending Queues <span className='ques'>?</span></p>
+                    <p>TM at your service.<span className='ques'></span></p>
                 </div>
+                <div className='lg_form'>
                 <form className='input-login' onSubmit={handleSubmit(onSubmit)}>
                     <div className='form-container'>
                         <div className='email'>
@@ -76,9 +77,11 @@ const SignUp = () => {
                         </div>
                     </div>
                     <button className='signup-btn' type='submit'>Sign Up Now</button>
-                    <p className='login-head'>Existing users <u onClick={handleClicked}>Login</u></p>
+                   
 
                 </form>
+                <div classname= 'sideright'> <p className='login-head'>Existing users <u onClick={handleClicked}>Login</u></p>
+                </div>
             </div>
             <div className='queue-img'>
                 <img className="pic" src={image} alt="logo" />
